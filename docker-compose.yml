@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: ./infra/docker
+    working_dir: /srv/app/services/api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      WARDEN_DB_URL: sqlite:////data/warden.db
+      WARDEN_DEMO_SEED_DATABASE: "true"
+      WARDEN_LOG_FORMAT: json
+    ports:
+      - "8000:8000"
+    volumes:
+      - warden-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  warden-data:

@@ -1,0 +1,71 @@
+{
+  "$schema": "warden/shared-controls/v1",
+  "version": "2024-06",
+  "controls": [
+    {
+      "control_id": "C-LOG-01",
+      "title": "Audit logging is enabled on security-relevant infrastructure",
+      "objective": "Security infrastructure (audit trails, CloudTrail, access logging) must remain enabled so that accountability and incident forensics are preserved.",
+      "requirement_summary": "Audit logging on security-relevant compute/storage infrastructure must be configured and actively enabled.",
+      "evidence_expected": [
+        "Current Terraform state showing logging configuration enabled",
+        "Named procedure for reviewing audit log gaps weekly"
+      ]
+    },
+    {
+      "control_id": "C-LOG-02",
+      "title": "CloudWatch log delivery is retained for security infrastructure",
+      "objective": "Infrastructure changes must keep log delivery (CloudWatch log group retention) intact so that monitoring remains effective.",
+      "requirement_summary": "CloudWatch retention must not be dropped for security-relevant log groups.",
+      "evidence_expected": [
+        "CloudWatch log group retention config evidence collected within 90 days"
+      ]
+    },
+    {
+      "control_id": "C-ENC-01",
+      "title": "Data at rest is encrypted (SSE/KMS)",
+      "objective": "AWS storage used for audit artifacts and business data must be encrypted at rest with customer-managed or AWS-managed keys.",
+      "requirement_summary": "AWS S3 buckets and EBS volumes backing audit data must retain server-side encryption configuration.",
+      "evidence_expected": [
+        "Current Terraform state showing encryption configuration",
+        "Policies describing acceptable key management"
+      ]
+    },
+    {
+      "control_id": "C-ENC-02",
+      "title": "Customer-managed key rotation is attested",
+      "objective": "Customer-managed CMKs must rotate at least annually with independent attestation.",
+      "requirement_summary": "KMS CMK rotation report must be current (within 12 months).",
+      "evidence_expected": [
+        "KMS CMK rotation attestation report"
+      ]
+    },
+    {
+      "control_id": "C-IAM-01",
+      "title": "Least-privilege IAM permissions",
+      "objective": "IAM policies must grant the minimum permissions required; wildcard-literal actions or resources are permitted only with documented justification.",
+      "requirement_summary": "IAM policy references must not widen permissions from a scoped allowlist to a wildcard.",
+      "evidence_expected": [
+        "IAM permissions audit performed monthly"
+      ]
+    },
+    {
+      "control_id": "C-NET-01",
+      "title": "Sensitive management ports are not exposed to the internet",
+      "objective": "Ingress rules granting 0.0.0.0/0 to SSH, RDP or database management ports are prohibited.",
+      "requirement_summary": "Security groups must not expose SSH/RDP/database management ports to the internet.",
+      "evidence_expected": [
+        "Cloud security posture scan report"
+      ]
+    },
+    {
+      "control_id": "C-ALM-01",
+      "title": "Every security-critical metric has a live alarm",
+      "objective": "Monitoring must raise alerts for security-critical events.",
+      "requirement_summary": "A metric alarm must exist for each critical resource; dropping alarms is prohibited.",
+      "evidence_expected": [
+        "Alarm coverage report from monitoring"
+      ]
+    }
+  ]
+}

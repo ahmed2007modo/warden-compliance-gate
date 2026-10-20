@@ -1,0 +1,7 @@
+{
+  "expected_outcome": "FAIL",
+  "expected_finding_rules": [
+    "wrd-iam-001",
+    "wrd-log-001"
+  ]
+}

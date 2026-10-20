@@ -1,0 +1,12 @@
+{
+  "framework_id": "cra",
+  "name": "EU Cyber Resilience Act",
+  "mappings": [
+    { "control_id": "C-LOG-01", "ref": "Annex I (2)(2)(c)", "requirement_text": "Secure logging must make it possible to detect security events and enable forensic analysis." },
+    { "control_id": "C-LOG-02", "ref": "Annex I (2)(2)(c)", "requirement_text": "Secure logging requires that logs are not dropped or truncated before use." },
+    { "control_id": "C-ENC-01", "ref": "Annex I (2)(2)(d)", "requirement_text": "Protection of confidentiality in transit and storage: data at rest uses encryption." },
+    { "control_id": "C-ENC-02", "ref": "Annex I (2)(2)(f)", "requirement_text": "Cryptography requires state-of-the-art mechanisms including key management." },
+    { "control_id": "C-IAM-01", "ref": "Annex I (2)(2)(a)", "requirement_text": "Products must restrict access through authentication, authorisation, and least-privilege." },
+    { "control_id": "C-ALM-01", "ref": "Annex I (2)(2)(c)", "requirement_text": "Security event detection and alerting must remain functional." }
+  ]
+}

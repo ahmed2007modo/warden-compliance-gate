@@ -1,0 +1,13 @@
+{
+  "framework_id": "soc2",
+  "name": "AICPA SOC 2 Trust Service Criteria",
+  "mappings": [
+    { "control_id": "C-LOG-01", "ref": "CC7.2", "requirement_text": "CC7.2: The entity monitors system components for anomalies indicative of security incidents." },
+    { "control_id": "C-LOG-02", "ref": "CC7.1", "requirement_text": "CC7.1: Configuration monitoring detects and evaluates infrastructure changes in a timely manner." },
+    { "control_id": "C-ENC-01", "ref": "CC6.7", "requirement_text": "CC6.7: The transmission, movement and removal of data is controlled and encryption protected." },
+    { "control_id": "C-ENC-02", "ref": "CC6.1", "requirement_text": "CC6.1: Logical access security measures protect against threats including key management." },
+    { "control_id": "C-IAM-01", "ref": "CC6.1", "requirement_text": "CC6.1: Logical access security software restricts logical access to authorized users." },
+    { "control_id": "C-NET-01", "ref": "CC6.6", "requirement_text": "CC6.6: Logical access to network infrastructure is restricted to authorized users." },
+    { "control_id": "C-ALM-01", "ref": "CC7.2", "requirement_text": "CC7.2: Anomalies are recorded, surfaced and escalated to the appropriate function." }
+  ]
+}

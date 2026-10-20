@@ -1,0 +1,6 @@
+{
+  "expected_outcome": "FAIL",
+  "expected_finding_rules": [
+    "wrd-enc-001"
+  ]
+}

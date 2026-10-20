@@ -1,0 +1,33 @@
+# Root pytest configuration for the Warden monorepo.
+# `pip install -e services/api[dev]` then run `pytest` from the repo root.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["services/api"]
+addopts = "-q --tb=short"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+src = ["services/api/app", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "B", "UP", "C4"]
+ignore = ["E501", "B008", "B011"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["C901"]
+"tests/*" = ["B008"]
+
+[tool.coverage.run]
+source = ["services/api/app"]
+omit = ["services/api/app/main.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "@abstractmethod",
+]

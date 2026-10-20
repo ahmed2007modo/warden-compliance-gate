@@ -1,0 +1,13 @@
+{
+  "framework_id": "nis2",
+  "name": "EU NIS2 Directive (2022/2555)",
+  "mappings": [
+    { "control_id": "C-LOG-01", "ref": "Art. 21(2)(b)", "requirement_text": "Incident handling requires security infrastructure that generates reliable audit logs." },
+    { "control_id": "C-LOG-02", "ref": "Art. 21(2)(b)", "requirement_text": "Incident handling and detection require retained log delivery for detection." },
+    { "control_id": "C-ENC-01", "ref": "Art. 21(2)(h)", "requirement_text": "Cryptography and encryption policies must be applied to data at rest." },
+    { "control_id": "C-ENC-02", "ref": "Art. 21(2)(h)", "requirement_text": "Cryptography requires documented key management and rotation." },
+    { "control_id": "C-IAM-01", "ref": "Art. 21(2)(i)", "requirement_text": "Access control policies and asset management: least-privilege IAM." },
+    { "control_id": "C-NET-01", "ref": "Art. 21(2)(a)", "requirement_text": "Risk management: network and information system security." },
+    { "control_id": "C-ALM-01", "ref": "Art. 21(2)(f)", "requirement_text": "Policies and procedures to assess effectiveness of cybersecurity risk-management measures." }
+  ]
+}

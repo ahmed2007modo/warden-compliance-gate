@@ -1,0 +1,13 @@
+{
+  "framework_id": "iso-27001-2022",
+  "name": "ISO/IEC 27001:2022",
+  "mappings": [
+    { "control_id": "C-LOG-01", "ref": "A.8.15", "requirement_text": "A.8.15 Logging: Logs that record activities, exceptions or other significant events shall be produced, stored, protected and analysed." },
+    { "control_id": "C-LOG-02", "ref": "A.8.16", "requirement_text": "A.8.16 Monitoring activities: Networks, systems and applications shall be monitored for anomalous behaviour." },
+    { "control_id": "C-ENC-01", "ref": "A.8.24", "requirement_text": "A.8.24 Use of cryptography: Rules for the effective use of cryptography shall be defined and implemented." },
+    { "control_id": "C-ENC-02", "ref": "A.8.24", "requirement_text": "A.8.24 Use of cryptography: Key management supporting the cryptography rules in place." },
+    { "control_id": "C-IAM-01", "ref": "A.5.15", "requirement_text": "A.5.15 Access control: Rules to control physical and logical access shall be implemented, least priv as default." },
+    { "control_id": "C-NET-01", "ref": "A.8.20", "requirement_text": "A.8.20 Networks security: Networks and network devices shall be secured, configured and monitored." },
+    { "control_id": "C-ALM-01", "ref": "A.8.16", "requirement_text": "A.8.16 Monitoring activities: Anomalous and suspicious behaviour surfaces as alarms." }
+  ]
+}

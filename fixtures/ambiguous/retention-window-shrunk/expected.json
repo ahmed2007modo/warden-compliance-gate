@@ -1,0 +1,6 @@
+{
+  "expected_outcome": "REVIEW_REQUIRED",
+  "expected_finding_rules": [
+    "wrd-log-003"
+  ]
+}

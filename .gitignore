@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+apps/web/dist/
+apps/web/.vite/
+
+# Databases / secrets
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Alembic scratch
+services/api/alembic_version.txt
+
+# Reports
+reports/
+evaluation-results.json
+# Test scratch DB
+.tmp-test-warden.db
